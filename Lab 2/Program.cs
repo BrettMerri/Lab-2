@@ -21,9 +21,14 @@ namespace Lab_2
                 int intInput;
                 string input = Console.ReadLine();
 
-                if (!int.TryParse(input, out intInput))
+                if (!int.TryParse(input, out intInput)) //validation if input is an integer
                 {
-                    Console.WriteLine("Invalid input!");
+                    Console.WriteLine("Input not an integer!");
+                    return;
+                }
+                if (intInput < 1 || intInput > 100)
+                {
+                    Console.WriteLine("Input is in an invalid range!"); //validation if input is between 1 and 100
                     return;
                 }
 
