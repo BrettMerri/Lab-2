@@ -10,7 +10,11 @@ namespace Lab_2
     {
         static void Main(string[] args)
         {
+            Console.Write("Please enter your first name: ");
+            string name = Console.ReadLine();
             while (true) {
+                Console.Clear();
+                Console.WriteLine("Hello, " + name + "!");
                 Console.Write("Enter a number between 1 and 100: ");
                 int input = int.Parse(Console.ReadLine());
 
@@ -39,7 +43,6 @@ namespace Lab_2
                 {
                     return;
                 }
-                Console.Clear();
             }
         }
     }
