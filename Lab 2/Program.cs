@@ -21,22 +21,22 @@ namespace Lab_2
                 int intInput;
                 string input = Console.ReadLine();
 
-                if (!int.TryParse(input, out intInput)) //validation if input is an integer
+                if (!int.TryParse(input, out intInput)) //Validation if input is an integer
                 {
                     Console.WriteLine("Input not an integer!");
                     return;
                 }
-                if (intInput < 1 || intInput > 100)
+                if (intInput < 1 || intInput > 100) //Validation if input is between 1 and 100
                 {
-                    Console.WriteLine("Input is in an invalid range!"); //validation if input is between 1 and 100
+                    Console.WriteLine("Input is in an invalid range!");
                     return;
                 }
 
-                if (intInput % 2 == 1)
+                if (intInput % 2 == 1) //Odd numbers
                 {
                     Console.WriteLine(input + " and Odd");
                 }
-                else if (intInput % 2 == 0)
+                else if (intInput % 2 == 0) //Even numbers
                 {
                     if (intInput <= 25)
                     {
@@ -51,10 +51,21 @@ namespace Lab_2
                         Console.WriteLine(input + " and Even");
                     }
                 }
+
                 Console.Write("Continue? (y/n): ");
+
                 string continueInput = Console.ReadLine().ToLower();
-            if (continueInput != "y")
+            if (continueInput == "y")
                 {
+                    continue;
+                }
+            else if (continueInput == "n")
+                {
+                    return;
+                }
+            else
+                {
+                    Console.WriteLine("Invalid input");
                     return;
                 }
             }
