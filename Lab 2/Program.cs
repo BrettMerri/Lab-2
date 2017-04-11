@@ -12,27 +12,36 @@ namespace Lab_2
         {
             Console.Write("Please enter your first name: ");
             string name = Console.ReadLine();
+
             while (true) {
                 Console.Clear();
                 Console.WriteLine("Hello, " + name + "!");
                 Console.Write("Enter a number between 1 and 100: ");
-                int input = int.Parse(Console.ReadLine());
 
-                if (input % 2 == 1)
+                int intInput;
+                string input = Console.ReadLine();
+
+                if (!int.TryParse(input, out intInput))
+                {
+                    Console.WriteLine("Invalid input!");
+                    return;
+                }
+
+                if (intInput % 2 == 1)
                 {
                     Console.WriteLine(input + " and Odd");
                 }
-                else if (input % 2 == 0)
+                else if (intInput % 2 == 0)
                 {
-                    if (input <= 25)
+                    if (intInput <= 25)
                     {
                         Console.WriteLine("Even and less than 25");
                     }
-                    else if (input <= 60)
+                    else if (intInput <= 60)
                     {
                         Console.WriteLine("Even");
                     }
-                    else if (input > 60)
+                    else if (intInput > 60)
                     {
                         Console.WriteLine(input + " and Even");
                     }
