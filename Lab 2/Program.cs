@@ -10,7 +10,7 @@ namespace Lab_2
     {
         static void Main(string[] args)
         {
-            Console.Write("Please enter your first name: ");
+            Console.Write("Please enter your first name: "); //Prompt for first name
             string name = Console.ReadLine();
 
             while (true) {
@@ -23,7 +23,7 @@ namespace Lab_2
 
                 if (!int.TryParse(input, out intInput)) //Validation if input is an integer
                 {
-                    Console.WriteLine("Input not an integer!");
+                    Console.WriteLine("Input not an integer!"); //If statement will run if input is not an integer
                     return;
                 }
                 if (intInput < 1 || intInput > 100) //Validation if input is between 1 and 100
@@ -52,9 +52,10 @@ namespace Lab_2
                     }
                 }
 
-                Console.Write("Continue? (y/n): ");
+                Console.Write("Continue? (y/n): "); //Prompt user to continue
 
                 string continueInput = Console.ReadLine().ToLower();
+
             if (continueInput == "y")
                 {
                     continue;
